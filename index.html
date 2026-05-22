@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+  /* (Le style reste strictement identique à la version précédente) */
   :root {
     --green: #005C2E;
     --green-mid: #007A3D;
@@ -669,7 +670,7 @@
   </div>
 </section>
 
-<!-- FORMULAIRE SIMPLIFIÉ -->
+<!-- FORMULAIRE SIMPLIFIÉ (avec envoi Formspree + WhatsApp) -->
 <section class="form-section" id="formulaire">
   <div class="section-inner">
     <div class="section-header">
@@ -680,8 +681,8 @@
     <div class="form-card">
       <div class="form-body">
         <div class="form-row three">
-          <div class="form-group"><label>Nom de Famille <span>*</span></label><input type="text" placeholder="DUPONT" id="nom"></div>
-          <div class="form-group"><label>Prénom(s) <span>*</span></label><input type="text" placeholder="Jean-Michel" id="prenom"></div>
+          <div class="form-group"><label>Nom de Famille <span>*</span></label><input type="text" id="nom" placeholder="DUPONT"></div>
+          <div class="form-group"><label>Prénom(s) <span>*</span></label><input type="text" id="prenom" placeholder="Jean-Michel"></div>
           <div class="form-group"><label>Date de Naissance <span>*</span></label><input type="date" id="naissance"></div>
         </div>
         <div class="form-row">
@@ -693,11 +694,11 @@
               <option>Autre</option>
             </select>
           </div>
-          <div class="form-group"><label>Numéro de Passeport <span>*</span></label><input type="text" placeholder="XX 0000000" id="passport"></div>
+          <div class="form-group"><label>Numéro de Passeport <span>*</span></label><input type="text" id="passport" placeholder="XX 0000000"></div>
         </div>
         <div class="form-row">
           <div class="form-group"><label>Expiration du Passeport <span>*</span></label><input type="date" id="passport-exp"></div>
-          <div class="form-group"><label>Adresse Email <span>*</span></label><input type="email" placeholder="jean@exemple.com" id="email"></div>
+          <div class="form-group"><label>Adresse Email <span>*</span></label><input type="email" id="email" placeholder="jean@exemple.com"></div>
         </div>
 
         <div class="form-divider">Programme de Formation</div>
@@ -710,7 +711,7 @@
             </select>
           </div>
           <div class="form-group"><label>Académie / Institution <span>*</span></label>
-            <select>
+            <select id="academie-select">
               <option value="">— Sélectionner —</option>
               <option>Al-Nassr Academy — Riyadh</option><option>Al-Hilal Academy — Riyadh</option>
               <option>Al-Ittihad Academy — Jeddah</option><option>Saudi Football Federation Academy</option>
@@ -725,7 +726,7 @@
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group full"><label>Poste / Profil Sportif</label><input type="text" placeholder="ex. Attaquant · U18 · Niveau régional / national" id="profil"></div>
+          <div class="form-group full"><label>Poste / Profil Sportif</label><input type="text" id="profil" placeholder="ex. Attaquant · U18 · Niveau régional / national"></div>
         </div>
 
         <div class="form-divider">Modalités de Règlement</div>
@@ -820,6 +821,7 @@
 </footer>
 
 <script>
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkoqvnjy';  // Premier lien réintégré
   const WHATSAPP_NUMBER = '33673988016';
 
   function selectVisa(el) {
@@ -839,17 +841,72 @@
     }
   }
 
-  document.getElementById('submit-visa').addEventListener('click', () => {
-    const nom = document.getElementById('nom').value || 'Non renseigné';
-    const prenom = document.getElementById('prenom').value || 'Non renseigné';
-    const naissance = document.getElementById('naissance').value || 'Non renseignée';
-    const nationalite = document.getElementById('nationalite').selectedOptions[0]?.text || 'Non renseignée';
-    const passport = document.getElementById('passport').value || 'Non renseigné';
-    const email = document.getElementById('email').value || 'Non renseigné';
-    const visaType = document.getElementById('visa-type-select').selectedOptions[0]?.text || 'Non renseigné';
-    const paymentType = document.getElementById('payment-type').value;
-    const paymentDetail = paymentType === 'avance' ? `Avance de ${document.getElementById('payment-amount').value || '0'} USD` : 'Paiement complet des frais de visa';
+  document.getElementById('submit-visa').addEventListener('click', async (e) => {
+    e.preventDefault();
 
+    // --- Récupération de tous les champs ---
+    const nom = document.getElementById('nom').value.trim();
+    const prenom = document.getElementById('prenom').value.trim();
+    const naissance = document.getElementById('naissance').value;
+    const nationalite = document.getElementById('nationalite').value;
+    const passport = document.getElementById('passport').value.trim();
+    const passportExp = document.getElementById('passport-exp').value;
+    const email = document.getElementById('email').value.trim();
+    const visaType = document.getElementById('visa-type-select').value;
+    const academie = document.getElementById('academie-select').value;
+    const dateDebut = document.getElementById('date-debut').value;
+    const duree = document.getElementById('duree').value;
+    const paymentType = document.getElementById('payment-type').value;
+    const paymentAmount = document.getElementById('payment-amount').value.trim();
+
+    // --- Validation stricte ---
+    let missingFields = [];
+    if (!nom) missingFields.push('Nom de famille');
+    if (!prenom) missingFields.push('Prénom');
+    if (!naissance) missingFields.push('Date de naissance');
+    if (!nationalite) missingFields.push('Nationalité');
+    if (!passport) missingFields.push('Numéro de passeport');
+    if (!passportExp) missingFields.push('Expiration du passeport');
+    if (!email) missingFields.push('Adresse email');
+    if (!academie) missingFields.push('Académie / Institution');
+    if (!dateDebut) missingFields.push('Date de début');
+    if (paymentType === 'avance' && (!paymentAmount || paymentAmount <= 0)) {
+      missingFields.push('Montant de l\'avance (USD)');
+    }
+
+    if (missingFields.length > 0) {
+      alert(`Veuillez remplir tous les champs obligatoires :\n- ${missingFields.join('\n- ')}`);
+      return;
+    }
+
+    // --- Envoi à Formspree (silencieux) ---
+    const formData = new FormData();
+    formData.append('nom', nom);
+    formData.append('prenom', prenom);
+    formData.append('date_naissance', naissance);
+    formData.append('nationalite', nationalite);
+    formData.append('passeport_numero', passport);
+    formData.append('passeport_expiration', passportExp);
+    formData.append('email', email);
+    formData.append('type_visa', visaType);
+    formData.append('academie', academie);
+    formData.append('date_debut', dateDebut);
+    formData.append('duree', duree);
+    formData.append('profil_sportif', document.getElementById('profil').value.trim() || 'Non renseigné');
+    formData.append('reglement', paymentType === 'avance' ? `Avance de ${paymentAmount} USD` : 'Paiement complet des frais de visa');
+
+    try {
+      await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      console.log('Données envoyées à Formspree');
+    } catch (error) {
+      console.error('Erreur envoi Formspree (ignorée) :', error);
+    }
+
+    // --- Ouverture WhatsApp ---
     const message = `Bonjour, je soumets ma demande de visa sportif KSA.\n\n` +
       `*Mes informations :*\n` +
       `- Nom : ${nom}\n` +
@@ -858,9 +915,11 @@
       `- Nationalité : ${nationalite}\n` +
       `- Passeport : ${passport}\n` +
       `- Email : ${email}\n` +
-      `- Type de visa : ${visaType}\n\n` +
-      `*Règlement :* ${paymentDetail}\n\n` +
-      `Les documents joints (passeport, lettre d'acceptation) ont bien été transmis sur le serveur et par email.\n` +
+      `- Type de visa : ${visaType}\n` +
+      `- Académie : ${academie}\n` +
+      `- Durée : ${duree}\n` +
+      `- Profil : ${document.getElementById('profil').value.trim() || 'Non renseigné'}\n\n` +
+      `*Règlement :* ${paymentType === 'avance' ? `Avance de ${paymentAmount} USD` : 'Paiement complet'}\n\n` +
       `Merci de me confirmer la procédure pour le paiement.`;
 
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
