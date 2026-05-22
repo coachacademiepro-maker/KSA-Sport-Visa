@@ -376,7 +376,6 @@
     display: block; margin: 40px auto 0;
   }
   .btn-submit:hover { background: var(--green-light); transform: translateY(-2px); }
-  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
   .info-banner {
     background: var(--green); color: white; padding: 20px 0;
@@ -490,7 +489,7 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
+<!-- TOP BAR avec mention partenariat -->
 <div class="topbar">
   <div class="topbar-inner">
     <div class="topbar-left">
@@ -670,130 +669,81 @@
   </div>
 </section>
 
-<!-- FORMULAIRE -->
+<!-- FORMULAIRE SIMPLIFIÉ -->
 <section class="form-section" id="formulaire">
   <div class="section-inner">
     <div class="section-header">
       <div class="section-tag">Formulaire Officiel</div>
       <h2>Déposer une Demande de Visa</h2>
-      <p>Remplissez le formulaire ci-dessous et cliquez sur Soumettre mon visa. Vos données seront envoyées en toute sécurité.</p>
+      <p>Remplissez le formulaire ci-dessous et cliquez sur Soumettre mon visa.</p>
     </div>
     <div class="form-card">
-      <form id="visa-form" class="form-body">
+      <div class="form-body">
         <div class="form-row three">
-          <div class="form-group">
-            <label>Nom de Famille <span>*</span></label>
-            <input type="text" placeholder="DUPONT" id="nom" name="nom" required>
-          </div>
-          <div class="form-group">
-            <label>Prénom(s) <span>*</span></label>
-            <input type="text" placeholder="Jean-Michel" id="prenom" name="prenom" required>
-          </div>
-          <div class="form-group">
-            <label>Date de Naissance <span>*</span></label>
-            <input type="date" id="naissance" name="naissance" required>
-          </div>
+          <div class="form-group"><label>Nom de Famille <span>*</span></label><input type="text" placeholder="DUPONT" id="nom"></div>
+          <div class="form-group"><label>Prénom(s) <span>*</span></label><input type="text" placeholder="Jean-Michel" id="prenom"></div>
+          <div class="form-group"><label>Date de Naissance <span>*</span></label><input type="date" id="naissance"></div>
         </div>
         <div class="form-row">
-          <div class="form-group">
-            <label>Nationalité <span>*</span></label>
-            <select id="nationalite" name="nationalite" required>
+          <div class="form-group"><label>Nationalité <span>*</span></label>
+            <select id="nationalite">
               <option value="">— Sélectionner —</option>
-              <option>Française</option>
-              <option>Belge</option>
-              <option>Sénégalaise</option>
-              <option>Ivoirienne</option>
-              <option>Marocaine</option>
-              <option>Congolaise (RDC)</option>
-              <option>Camerounaise</option>
-              <option>Gabonaise</option>
-              <option>Tchadienne</option>
-              <option>Centrafricaine</option>
+              <option>Française</option><option>Belge</option><option>Sénégalaise</option><option>Ivoirienne</option><option>Marocaine</option>
+              <option>Congolaise (RDC)</option><option>Camerounaise</option><option>Gabonaise</option><option>Tchadienne</option><option>Centrafricaine</option>
               <option>Autre</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Numéro de Passeport <span>*</span></label>
-            <input type="text" placeholder="XX 0000000" id="passport" name="passport" required>
-          </div>
+          <div class="form-group"><label>Numéro de Passeport <span>*</span></label><input type="text" placeholder="XX 0000000" id="passport"></div>
         </div>
         <div class="form-row">
-          <div class="form-group">
-            <label>Expiration du Passeport <span>*</span></label>
-            <input type="date" id="passport-exp" name="passport_exp" required>
-          </div>
-          <div class="form-group">
-            <label>Adresse Email <span>*</span></label>
-            <input type="email" placeholder="jean@exemple.com" id="email" name="email" required>
-          </div>
+          <div class="form-group"><label>Expiration du Passeport <span>*</span></label><input type="date" id="passport-exp"></div>
+          <div class="form-group"><label>Adresse Email <span>*</span></label><input type="email" placeholder="jean@exemple.com" id="email"></div>
         </div>
 
         <div class="form-divider">Programme de Formation</div>
         <div class="form-row">
-          <div class="form-group">
-            <label>Type de Visa <span>*</span></label>
-            <select id="visa-type-select" name="visa_type" required>
+          <div class="form-group"><label>Type de Visa <span>*</span></label>
+            <select id="visa-type-select">
               <option>Visa Football Académique</option>
               <option>Visa Académique Sportif</option>
               <option>Visa Stage Court Séjour</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Académie / Institution <span>*</span></label>
-            <select name="academie" required>
+          <div class="form-group"><label>Académie / Institution <span>*</span></label>
+            <select>
               <option value="">— Sélectionner —</option>
-              <option>Al-Nassr Academy — Riyadh</option>
-              <option>Al-Hilal Academy — Riyadh</option>
-              <option>Al-Ittihad Academy — Jeddah</option>
-              <option>Saudi Football Federation Academy</option>
-              <option>Neom Sport Academy</option>
-              <option>Autre institution agréée</option>
+              <option>Al-Nassr Academy — Riyadh</option><option>Al-Hilal Academy — Riyadh</option>
+              <option>Al-Ittihad Academy — Jeddah</option><option>Saudi Football Federation Academy</option>
+              <option>Neom Sport Academy</option><option>Autre institution agréée</option>
             </select>
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group">
-            <label>Date de Début <span>*</span></label>
-            <input type="date" id="date-debut" name="date_debut" required>
-          </div>
-          <div class="form-group">
-            <label>Durée Prévue <span>*</span></label>
-            <select id="duree" name="duree" required>
-              <option>3 mois</option>
-              <option>6 mois</option>
-              <option>12 mois</option>
-              <option>18 mois</option>
-              <option>24 mois</option>
-            </select>
+          <div class="form-group"><label>Date de Début <span>*</span></label><input type="date" id="date-debut"></div>
+          <div class="form-group"><label>Durée Prévue <span>*</span></label>
+            <select id="duree"><option>3 mois</option><option>6 mois</option><option>12 mois</option><option>18 mois</option><option>24 mois</option></select>
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group full">
-            <label>Poste / Profil Sportif</label>
-            <input type="text" placeholder="ex. Attaquant · U18 · Niveau régional / national" id="profil" name="profil">
-          </div>
+          <div class="form-group full"><label>Poste / Profil Sportif</label><input type="text" placeholder="ex. Attaquant · U18 · Niveau régional / national" id="profil"></div>
         </div>
 
         <div class="form-divider">Modalités de Règlement</div>
         <div class="form-row">
-          <div class="form-group">
-            <label>Type de Règlement <span>*</span></label>
-            <select id="payment-type" name="reglement_type" required onchange="document.getElementById('amount-group').style.display = this.value === 'avance' ? 'flex' : 'none'">
+          <div class="form-group"><label>Type de Règlement <span>*</span></label>
+            <select id="payment-type" onchange="document.getElementById('amount-group').style.display = this.value === 'avance' ? 'flex' : 'none'">
               <option value="complet">Payer le montant complet</option>
               <option value="avance">Payer une avance</option>
             </select>
           </div>
-          <div class="form-group" id="amount-group" style="display:none;">
-            <label>Montant de l'avance (USD) <span>*</span></label>
-            <input type="number" id="payment-amount" name="reglement_montant" placeholder="ex: 150" min="1">
-          </div>
+          <div class="form-group" id="amount-group" style="display:none;"><label>Montant de l'avance (USD) <span>*</span></label><input type="number" id="payment-amount" placeholder="ex: 150" min="1"></div>
         </div>
 
         <div class="form-divider">Téléversement des Documents</div>
         <div class="form-row">
           <div class="form-group">
             <label>Passeport (scan recto/verso) <span>*</span></label>
-            <input type="file" name="document_passeport" id="input-passeport" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="updateFileName(this, 'zone-passeport', 'file-name-passeport')" required>
+            <input type="file" id="input-passeport" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="updateFileName(this, 'zone-passeport', 'file-name-passeport')">
             <div class="upload-zone" id="zone-passeport" onclick="document.getElementById('input-passeport').click()">
               <div style="font-size:24px">📄</div>
               <p><strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB</p>
@@ -802,7 +752,7 @@
           </div>
           <div class="form-group">
             <label>Lettre d'Acceptation Académie <span>*</span></label>
-            <input type="file" name="document_acceptation" id="input-acceptation" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="updateFileName(this, 'zone-acceptation', 'file-name-acceptation')" required>
+            <input type="file" id="input-acceptation" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="updateFileName(this, 'zone-acceptation', 'file-name-acceptation')">
             <div class="upload-zone" id="zone-acceptation" onclick="document.getElementById('input-acceptation').click()">
               <div style="font-size:24px">🏟️</div>
               <p><strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB</p>
@@ -811,8 +761,8 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-submit" id="submit-visa">🎯 SOUMETTRE MON VISA</button>
-      </form>
+        <button class="btn-submit" id="submit-visa">🎯 SOUMETTRE MON VISA</button>
+      </div>
     </div>
   </div>
 </section>
@@ -852,15 +802,15 @@
     </div>
     <div class="footer-col">
       <h4>Types de Visa</h4>
-      <ul><li><a href="#">Football Académique</a></li><li><a href="#">Académique Sportif</a></li><li><a href="#">Stage Court Séjour</a></li><li><a href="#">Visa Entraîneur</a></li><li><a href="#">Visa Dirigeant Club</a></li></ul>
+      <ul><li><a href="#">Football Académique</a></li><li><a href="#">Académique Sportif</a></li><li><a href="#">Stage Court Séjour</a></li></ul>
     </div>
     <div class="footer-col">
       <h4>Ressources</h4>
-      <ul><li><a href="#">Guide du Demandeur</a></li><li><a href="#">Académies Agréées</a></li><li><a href="#">Règlement FIFA RSTP</a></li><li><a href="#">FAQ</a></li><li><a href="#">Support</a></li></ul>
+      <ul><li><a href="#">Guide du Demandeur</a></li><li><a href="#">Académies Agréées</a></li><li><a href="#">FAQ</a></li></ul>
     </div>
     <div class="footer-col">
       <h4>Légal</h4>
-      <ul><li><a href="#">Conditions Générales</a></li><li><a href="#">Confidentialité</a></li><li><a href="#">Mentions Légales</a></li><li><a href="#">Cookies</a></li><li><a href="#">Accessibilité</a></li></ul>
+      <ul><li><a href="#">Confidentialité</a></li><li><a href="#">Mentions Légales</a></li></ul>
     </div>
   </div>
   <div class="footer-bottom">
@@ -870,7 +820,6 @@
 </footer>
 
 <script>
-  const FORMSPREE_URL = 'https://formspree.io/f/mkoqvnjy';
   const WHATSAPP_NUMBER = '33673988016';
 
   function selectVisa(el) {
@@ -890,63 +839,31 @@
     }
   }
 
-  document.getElementById('visa-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const submitBtn = document.getElementById('submit-visa');
-    submitBtn.disabled = true;
-    submitBtn.textContent = '⏳ Envoi en cours...';
+  document.getElementById('submit-visa').addEventListener('click', () => {
+    const nom = document.getElementById('nom').value || 'Non renseigné';
+    const prenom = document.getElementById('prenom').value || 'Non renseigné';
+    const naissance = document.getElementById('naissance').value || 'Non renseignée';
+    const nationalite = document.getElementById('nationalite').selectedOptions[0]?.text || 'Non renseignée';
+    const passport = document.getElementById('passport').value || 'Non renseigné';
+    const email = document.getElementById('email').value || 'Non renseigné';
+    const visaType = document.getElementById('visa-type-select').selectedOptions[0]?.text || 'Non renseigné';
+    const paymentType = document.getElementById('payment-type').value;
+    const paymentDetail = paymentType === 'avance' ? `Avance de ${document.getElementById('payment-amount').value || '0'} USD` : 'Paiement complet des frais de visa';
 
-    const formData = new FormData(e.target);
+    const message = `Bonjour, je soumets ma demande de visa sportif KSA.\n\n` +
+      `*Mes informations :*\n` +
+      `- Nom : ${nom}\n` +
+      `- Prénom : ${prenom}\n` +
+      `- Date de naissance : ${naissance}\n` +
+      `- Nationalité : ${nationalite}\n` +
+      `- Passeport : ${passport}\n` +
+      `- Email : ${email}\n` +
+      `- Type de visa : ${visaType}\n\n` +
+      `*Règlement :* ${paymentDetail}\n\n` +
+      `Les documents joints (passeport, lettre d'acceptation) ont bien été transmis sur le serveur et par email.\n` +
+      `Merci de me confirmer la procédure pour le paiement.`;
 
-    try {
-      const response = await fetch(FORMSPREE_URL, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        const nom = formData.get('nom') || 'Non renseigné';
-        const prenom = formData.get('prenom') || 'Non renseigné';
-        const naissance = formData.get('naissance') || 'Non renseignée';
-        const nationalite = formData.get('nationalite') || 'Non renseignée';
-        const passport = formData.get('passport') || 'Non renseigné';
-        const email = formData.get('email') || 'Non renseigné';
-        const visaType = formData.get('visa_type') || 'Non renseigné';
-        const paymentType = formData.get('reglement_type');
-        const paymentAmount = formData.get('reglement_montant');
-        const paymentDetail = paymentType === 'avance' ? `Avance de ${paymentAmount || '0'} USD` : 'Paiement complet des frais de visa';
-
-        const message = `Bonjour, je soumets ma demande de visa sportif KSA.\n\n` +
-          `*Mes informations :*\n` +
-          `- Nom : ${nom}\n` +
-          `- Prénom : ${prenom}\n` +
-          `- Date de naissance : ${naissance}\n` +
-          `- Nationalité : ${nationalite}\n` +
-          `- Passeport : ${passport}\n` +
-          `- Email : ${email}\n` +
-          `- Type de visa : ${visaType}\n\n` +
-          `*Règlement :* ${paymentDetail}\n\n` +
-          `Les documents joints ont été transmis avec succès.\n` +
-          `Merci de me confirmer la procédure pour le paiement.`;
-
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
-
-        e.target.reset();
-        document.getElementById('amount-group').style.display = 'none';
-        document.getElementById('file-name-passeport').textContent = '';
-        document.getElementById('file-name-acceptation').textContent = '';
-        document.getElementById('zone-passeport').querySelector('p').innerHTML = '<strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB';
-        document.getElementById('zone-acceptation').querySelector('p').innerHTML = '<strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB';
-      } else {
-        throw new Error('Erreur serveur');
-      }
-    } catch (error) {
-      alert('Une erreur est survenue lors de l\'envoi. Veuillez réessayer.');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = '🎯 SOUMETTRE MON VISA';
-    }
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
   });
 </script>
 
